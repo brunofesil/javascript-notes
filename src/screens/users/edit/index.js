@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 
-const UserEdit = () => (
+const UsersEditScreen = () => (
   <Fragment>
     Fala galera!!
   </Fragment>
 );
 
-export default UserEdit;
+export default UsersEditScreen;

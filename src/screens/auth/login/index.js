@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 
 const Login = () => (
   <Fragment>
-    Fala galera!!
+    <p>Fala galera!!</p>
   </Fragment>
 );
 

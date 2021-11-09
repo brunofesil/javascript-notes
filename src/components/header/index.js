@@ -1,17 +1,18 @@
-import React, { userState } from 'react';
-import { Navbar, Container } from 'rbx';
+import React, { useState } from 'react';
+import { Navbar, Container, Column } from 'rbx';
 import logoImage from '../../assets/images/logo.png';
 import '../../styles/header.scss';
 import { Link } from 'react-router-dom';
+import { ColumnGroup } from 'rbx/grid/columns/column-group';
 
 function Header() {
-  // const [openMenu, setOpenMenu] = useState(false)
+  const [openMenu, setOpenMenu] = useState(false)
 
   return (
     <Navbar>
       <Container>
         <Navbar.Brand>
-          <Link>
+          <Link to="/">
             <img src={logoImage} />
           </Link>
           <Navbar.Burger
@@ -27,7 +28,14 @@ function Header() {
 
         <Navbar.Menu id="navbar-menu">
           <Navbar.Segment as="div" className="navbar-item navbar-end" align="right">
-            Item 1
+            <ColumnGroup>
+              <Column>
+                <Link to="/register" className="button is-white has-text-custom-purple">Register</Link>
+              </Column>
+              <Column>
+                <Link to="/login" className="button is-outlined is-custom-purple">Login</Link>
+              </Column>
+            </ColumnGroup>
           </Navbar.Segment>
         </Navbar.Menu>
       </Container>
