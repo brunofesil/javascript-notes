@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Navbar, Container, Column, Button, Dropdown } from 'rbx';
+import { Navbar, Column, Button, Dropdown } from 'rbx';
 import logoImage from '../../assets/images/logo-white.png';
 import "../../styles/header.scss";
 import UsersService from '../../services/users';
@@ -30,6 +30,7 @@ function HeaderLogged(props) {
             </Link>
           </Column>
         </Column.Group>
+        {/* Sem o nav.burger os elementos do menu nao aparecem, so aparece no desktop por default. */}
         <Navbar.Burger
           className="navbar-burger burger"
           aria-label="menu"
